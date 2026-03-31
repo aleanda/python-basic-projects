@@ -3,7 +3,7 @@ import csv
 total_revenue = 0
 total_items = 0
 
-with open("sales.csv", newline="") as file:
+with open("data/sales.csv", newline="") as file:
     reader = csv.DictReader(file)
     
     for row in reader:
@@ -20,7 +20,7 @@ print("Total items sold:", total_items)
 
 products = {}
 
-with open("sales.csv", newline="") as file:
+with open("data/sales.csv", newline="") as file:
     reader = csv.DictReader(file)
     
     for row in reader:
