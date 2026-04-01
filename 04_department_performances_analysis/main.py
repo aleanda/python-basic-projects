@@ -7,7 +7,7 @@ department_avg_training = {}
 total_employees = 0
 no_total_training = 0
 
-with open("hr_data.csv", newline="", encoding="utf-8-sig") as file:
+with open("data/hr_data.csv", newline="", encoding="utf-8-sig") as file:
     reader = csv.DictReader(file)
 
     for row in reader:
