@@ -19,68 +19,53 @@ The dataset contains employee-level information, including:
 
 ## Analysis Performed
 
-The following steps were implemented using Python:
+The analysis was carried out using Python, starting from raw CSV data and progressively transforming it into meaningful insights.
+First, the dataset was parsed and cleaned to extract the relevant variables for each employee. The data was then grouped by department in order to compute key metrics such as the number of employees, the average performance score, and the average number of trainings attended.
+Departments were subsequently classified into three categories (Low, Medium, High) based on their average performance score. This made it easier to compare groups and identify patterns.
 
-* Data parsing from CSV file
-* Aggregation by department:
+Finally, the results were organized into a structured table, allowing for a direct comparison between training frequency and performance across departments.
 
-  * Total number of employees
-  * Average performance score
-  * Average number of trainings
-* Department classification based on performance:
+---
 
-  * **Low**: score < 60
-  * **Medium**: 60 <= score < 75
-  * **High**: score >= 75
-* Tabular reporting with formatted output
-* Comparative analysis between training frequency and performance
+# Results summary
+
+The table below shows the aggregated results by department:
+
+| Department         | Employees | Avg Score | Performance | Avg Trainings |
+|--------------------|-----------|-----------|-------------|---------------|
+| Analytics          | 2319      | 84.54     | High        | 1.35          |
+| R&D                | 440       | 84.41     | High        | 1.35          |
+| Technology         | 3011      | 79.86     | High        | 1.25          |
+| Procurement        | 3020      | 70.15     | Medium      | 1.34          |
+| Finance            | 1091      | 60.32     | Medium      | 1.31          |
+| Operations         | 4764      | 60.30     | Medium      | 1.17          |
+| Legal              | 445       | 59.58     | Low         | 1.08          |
+| HR                 | 1085      | 50.31     | Low         | 1.07          |
+| Sales & Marketing  | 7315      | 50.09     | Low         | 1.27          |
 
 ---
 
 ## Key Findings
 
-* Departments with **low training frequency** tend to show **lower performance**, suggesting that training may have a positive impact.
-* However, the **Sales & Marketing department** represents a notable exception:
-
-  * High average number of trainings
-  * Low performance score
-
-This indicates that training quantity alone is **not sufficient** to explain performance differences.
+The analysis reveals a mixed relationship between training frequency and performance.
+Departments with lower training exposure generally tend to have lower performance scores, suggesting that training may play a role in improving outcomes. However, this relationship is not consistent across all departments.
+In particular, Sales & Marketing stands out as an exception: despite having a relatively high average number of trainings, it shows one of the lowest performance scores. This suggests that simply increasing the number of training sessions is not sufficient.
 
 ---
 
 ## Insights
 
-The analysis suggests that:
-
-* Training frequency is **not a strong standalone predictor** of performance
-* The relationship between training and performance is **non-linear and context-dependent**
-* Some departments may benefit from training, while others do not.
-
-Possible explanations include:
-
-* Ineffective or low-quality training programs
-* Misalignment between training content and job requirements
-* Information overload due to excessive training
-* External factors (e.g., workload, experience level, turnover)
+These results suggest that the effectiveness of training is likely more important than its frequency.
+While training appears to be beneficial in some departments, its impact varies significantly depending on context. Factors such as training quality, relevance to job roles, and employee engagement may play a crucial role.
+Additionally, the presence of outliers indicates that other variables - such as workload, experience, or organizational dynamics - may influence performance.
 
 ---
 
 ## Business Recommendations
 
-Based on the findings, the following actions are recommended:
-
-1. **Review training effectiveness**
-   Evaluate whether training content is relevant and practical.
-
-2. **Customize training by department**
-   Avoid a one-size-fits-all approach.
-
-3. **Measure training impact**
-   Introduce KPIs to assess training outcomes.
-
-4. **Investigate underperforming departments**
-   Conduct qualitative analysis (e.g., interviews, feedback).
+Rather than increasing the number of training sessions across the board, organizations should focus on improving the quality and relevance of training programs.
+In particular, departments such as Sales & Marketing should be analyzed more closely to understand why high training exposure does not translate into better performance.
+A more targeted approach - including feedback collection, performance tracking, and tailored training paths - could lead to more effective outcomes.
 
 ---
 
